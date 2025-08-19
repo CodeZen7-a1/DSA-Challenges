@@ -9,13 +9,13 @@ public class LeadersInArray {
 
         // Start from the rightmost element
         int maxFromRight = arr[n - 1];
-        leaders.add(maxFromRight); // last element is always a leader
+        leaders.add(maxFromRight);
 
         // Traverse array from second last element to the left
         for (int i = n - 2; i >= 0; i--) {
             if (arr[i] >= maxFromRight) {
-                leaders.add(arr[i]);   // arr[i] is a leader
-                maxFromRight = arr[i]; // update max
+                leaders.add(arr[i]);
+                maxFromRight = arr[i];
             }
         }
 
